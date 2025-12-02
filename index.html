@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Moda & Styl — Strona główna</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <div class="logo">M</div>
+            <div class="brand-text">
+                <h1>Moda & Styl</h1>
+                <div class="muted">Blog modowy</div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link active">Strona główna</a>
+            <a href="trendy.html" class="nav-link">Najnowsze trendy</a>
+            <a href="gwiazdy.html" class="nav-link">Co noszą gwiazdy</a>
+            <a href="szafa.html" class="nav-link">Moja szafa</a>
+            <a href="kontakt.html" class="nav-link">Kontakt</a>
+        </nav>
+    </header>
+
+    <main class="wrap">
+        <section class="hero">
+            <div class="hero-left">
+                <h2>Witaj na blogu Moda & Styl</h2>
+                <p class="lead">Inspiracje, porady i analiza trendów — wszystko w eleganckich odcieniach beżu i brązu.
+                </p>
+
+
+                <div class="posts">
+                    <!-- Trendy -->
+                    <a href="trendy.html" class="post-link">
+                        <article class="post">
+                            <div class="img" style="background-image: url('img/pics1.jpg');">
+                            </div>
+                            <div class="meta">
+                                <span class="tag">Trendy</span>
+                                <h3>Beże tej jesieni — jak je nosić?</h3>
+                                <p class="muted">
+                                    Eleganckie odcienie beżu w ubraniach i dodatkach – idealne do monochromatycznych
+                                    stylizacji lub subtelnych akcentów kolorystycznych.
+                                </p>
+                            </div>
+                        </article>
+                    </a>
+
+                    <!-- Gwiazdy / street style -->
+                    <a href="gwiazdy.html" class="post-link">
+                        <article class="post">
+                            <div class="img" style="background-image: url('img/pics.jpg');">
+                            </div>
+                            <div class="meta"><span class="tag">Gwiazdy</span>
+                                <h3>Kontrowersyjna kreacja słynnej celebrytki</h3>
+                                <p class="muted">Czym w trakcie tegorocznej edycji Met Gali zwróciła na siebie uwagę
+                                    najsłynniejsza z sióstr Kardashian?</p>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </div>
+
+            <aside class="hero-aside">
+                <div class="card">
+                    <h4>Newsletter</h4>
+                    <p class="muted">Zapisz się, aby otrzymywać nowe wpisy.</p>
+                    <div class="newsletter">
+                        <input id="newsletter-email" placeholder="Twój email" />
+                        <button class="button" id="subscribe-btn">Zapisz się</button>
+                    </div>
+
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="site-footer">© Moda & Styl — Wszystkie prawa zastrzeżone</footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
