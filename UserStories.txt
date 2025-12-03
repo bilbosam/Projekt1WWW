@@ -1,0 +1,11 @@
+User Stories – Moda & Styl
+
+Poniższa lista przedstawia główne wymagania użytkowników strony „Moda & Styl”. 
+Każdy punkt opisuje cel użytkownika i oczekiwaną funkcjonalność.
+
+1. Jako odwiedzający stronę chcę zapisać się do newslettera, aby otrzymywać powiadomienia o nowych wpisach.
+2. Jako czytelnik chcę zobaczyć najnowsze trendy w eleganckich stylizacjach, aby być na bieżąco z modą.
+3. Jako fan mody chcę przeglądać stylizacje gwiazd z czerwonych dywanów, aby inspirować swoje własne zestawy ubrań.
+4. Jako użytkownik chcę kliknąć elementy w wirtualnej szafie blogerki, aby zobaczyć szczegółowe informacje i zdjęcia wybranych ubrań.
+5. Jako odwiedzający chcę wysłać wiadomość przez formularz kontaktowy, aby zapytać o współpracę lub wysłać opinię.
+6. Jako użytkownik mobilny chcę mieć menu typu hamburger, aby łatwo nawigować po stronie na telefonie.
