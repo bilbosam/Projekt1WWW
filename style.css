@@ -1,44 +1,66 @@
+/* === Zmienne globalne — kolory, cienie, fonty === */
 :root {
     --bg: #f6f2ee;
+    /* tło strony */
     --paper: #fffaf6;
+    /* tło paneli/kart */
     --accent-1: #a87b5b;
+    /* kolor akcentu 1 */
     --accent-2: #8b5e3c;
+    /* kolor akcentu 2 */
     --muted: #cbb8a3;
+    /* kolor mniej ważnych elementów */
     --text: #3a2b22;
+    /* główny kolor tekstu */
     --soft-shadow: 0 6px 18px rgba(58, 43, 34, 0.08);
+    /* delikatny cień */
     font-family: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
 }
 
+/* === Podstawowe ustawienia dla wszystkich elementów === */
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
+    /* uwzględnia padding i border w rozmiarze elementu */
 }
 
+/* === Styl podstawowy strony === */
 html,
 body {
     height: 100%;
     margin: 0;
     background: linear-gradient(180deg, var(--bg), #efe7de);
-    color: var(--text)
+    /* gradient tła strony */
+    color: var(--text);
+    /* domyślny kolor tekstu */
 }
 
+/* === Główny kontener strony === */
 .wrap {
     max-width: 1150px;
+    /* ograniczenie szerokości treści */
     margin: 32px auto;
-    padding: 24px
+    /* wycentrowanie poziome i odstęp od góry/dół */
+    padding: 24px;
+    /* wewnętrzny odstęp */
 }
 
+/* === Nagłówek i branding === */
 .site-header {
     display: flex;
+    /* elastyczny układ poziomy */
     align-items: center;
+    /* wyrównanie pionowe */
     justify-content: space-between;
+    /* elementy po bokach */
     padding: 18px 24px;
-    background: transparent
+    background: transparent;
 }
 
 .brand {
     display: flex;
     align-items: center;
-    gap: 12px
+    gap: 12px;
+    /* odstęp między logo a tekstem */
 }
 
 .logo {
@@ -51,21 +73,23 @@ body {
     justify-content: center;
     color: #fff;
     font-weight: 700;
-    box-shadow: var(--soft-shadow)
+    box-shadow: var(--soft-shadow);
 }
 
 .brand-text h1 {
     margin: 0;
-    font-size: 18px
+    font-size: 18px;
 }
 
 .muted {
-    color: #7b6355
+    color: #7b6355;
+    /* używane dla mniej ważnych tekstów */
 }
 
+/* === Menu nawigacyjne === */
 .main-nav {
     display: flex;
-    gap: 8px
+    gap: 8px;
 }
 
 .nav-link {
@@ -73,32 +97,37 @@ body {
     border-radius: 10px;
     text-decoration: none;
     color: var(--text);
-    font-weight: 600
+    font-weight: 600;
 }
 
 .nav-link.active {
     background: var(--paper);
-    border: 1px solid var(--muted)
+    /* wyróżnienie aktywnej strony */
+    border: 1px solid var(--muted);
 }
 
+/* === Sekcja hero / główna karta na stronie === */
 .hero {
     display: grid;
     grid-template-columns: 1fr 320px;
+    /* główna treść i boczny panel */
     gap: 20px;
     padding: 22px;
     border-radius: 16px;
     background: linear-gradient(180deg, rgba(255, 250, 246, 0.8), #fffaf6);
-    box-shadow: var(--soft-shadow)
+    box-shadow: var(--soft-shadow);
 }
 
 .lead {
-    color: #5b453b
+    color: #5b453b;
+    /* wyróżniony tekst */
 }
 
+/* === Przyciski i CTA === */
 .cta-row {
     display: flex;
     gap: 10px;
-    margin-top: 12px
+    margin-top: 12px;
 }
 
 .button {
@@ -110,9 +139,10 @@ body {
     font-weight: 700;
     border: none;
     cursor: pointer;
-    box-shadow: 0 8px 30px rgba(139, 94, 60, 0.18)
+    box-shadow: 0 8px 30px rgba(139, 94, 60, 0.18);
 }
 
+/* === Małe elementy jak pigułki / tagi === */
 .pill {
     padding: 8px 12px;
     border-radius: 999px;
@@ -121,14 +151,15 @@ body {
     text-decoration: none;
     color: var(--text);
     display: inline-flex;
-    align-items: center
+    align-items: center;
 }
 
+/* === Lista postów / kart === */
 .posts {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 16px;
-    margin-top: 18px
+    margin-top: 18px;
 }
 
 .post {
@@ -136,66 +167,73 @@ body {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--soft-shadow);
-    transition: transform .28s ease, box-shadow .28s ease
+    transition: transform .28s ease, box-shadow .28s ease;
 }
 
 .post:hover {
     transform: translateY(-8px);
-    box-shadow: 0 18px 40px rgba(58, 43, 34, 0.12)
+    /* unoszenie przy najechaniu */
+    box-shadow: 0 18px 40px rgba(58, 43, 34, 0.12);
 }
 
 .post .img {
     height: 160px;
     background-size: cover;
-    background-position: center
+    background-position: center;
 }
 
 .post .meta {
-    padding: 12px
+    padding: 12px;
 }
 
+/* === Tagi / etykiety === */
 .tag {
     display: inline-block;
     padding: 6px 10px;
     border-radius: 999px;
     font-size: 12px;
     background: linear-gradient(90deg, var(--muted), rgba(0, 0, 0, 0.02));
-    margin-right: 8px
+    margin-right: 8px;
 }
 
+/* === Karty / panele === */
 .card {
     padding: 14px;
     border-radius: 12px;
     background: linear-gradient(180deg, #fff, #fffaf6);
-    box-shadow: var(--soft-shadow)
+    box-shadow: var(--soft-shadow);
 }
 
+/* === Formularze newslettera / inputy === */
 .hero-aside .newsletter input {
     width: 100%;
     padding: 8px;
     border-radius: 10px;
     border: 1px solid #eadfce;
     background: transparent;
-    margin-bottom: 8px
+    margin-bottom: 8px;
 }
 
+/* === Filtry i rzędy elementów === */
 .filter-row {
     display: flex;
     gap: 8px;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
+/* === Stopka strony === */
 .site-footer {
     text-align: center;
     padding: 18px;
-    color: #6b5246
+    color: #6b5246;
 }
 
+/* === Siatka elementów w szafie / galerii === */
 .wardrobe-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 12px;
-    margin-top: 10px
+    margin-top: 10px;
 }
 
 .wardrobe-item {
@@ -366,4 +404,101 @@ textarea {
 .img-row .text p {
     margin: 0;
     color: var(--muted);
+}
+
+/* --- Navbar dopasowany do Twojego stylu --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background: var(--paper);
+    border-radius: 12px;
+    box-shadow: var(--soft-shadow);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-menu li a:hover {
+    background: var(--accent-1);
+    color: #fff;
+}
+
+.nav-menu li a.active {
+    background: var(--accent-2);
+    color: #fff;
+}
+
+/* Hamburger ukryty na desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--text);
+    transition: 0.3s;
+}
+
+/* Animacja przy aktywnym hamburgerze */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        /* dopasuj do wysokości headera */
+        right: 24px;
+        background: var(--paper);
+        flex-direction: column;
+        width: 200px;
+        padding: 16px;
+        display: none;
+        box-shadow: var(--soft-shadow);
+        border-radius: 12px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin-bottom: 12px;
+    }
+
+    .nav-menu li:last-child {
+        margin-bottom: 0;
+    }
 }

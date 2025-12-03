@@ -3,52 +3,77 @@
 
 <head>
     <meta charset="utf-8" />
+    <!-- Ustawienie viewport dla urządzeń mobilnych -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Tytuł strony wyświetlany w karcie przeglądarki -->
     <title>Kontakt — Moda & Styl</title>
+    <!-- Podpięcie pliku CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- === Nagłówek strony === -->
     <header class="site-header">
+        <!-- Logo i nazwa strony -->
         <div class="brand">
-            <div class="logo">M</div>
+            <div class="logo">M</div> <!-- Ikona/logo -->
             <div class="brand-text">
-                <h1>Moda & Styl</h1>
-                <div class="muted">Kontakt</div>
+                <h1>Moda & Styl</h1> <!-- Główny tytuł -->
+                <div class="muted">Kontakt</div> <!-- Opis lub podtytuł -->
             </div>
         </div>
-        <nav class="main-nav">
-            <a href="index.html" class="nav-link">Strona główna</a>
-            <a href="trendy.html" class="nav-link">Najnowsze trendy</a>
-            <a href="gwiazdy.html" class="nav-link">Co noszą gwiazdy</a>
-            <a href="szafa.html" class="nav-link">Moja szafa</a>
-            <a href="kontakt.html" class="nav-link active">Kontakt</a>
+
+        <!-- === RESPONSYWNE MENU HAMBURGER === -->
+        <nav class="navbar">
+            <!-- Hamburger menu do mobilnej nawigacji -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Lista linków nawigacyjnych -->
+            <ul class="nav-menu">
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="trendy.html">Najnowsze trendy</a></li>
+                <li><a href="gwiazdy.html">Co noszą gwiazdy</a></li>
+                <li><a href="szafa.html">Moja szafa</a></li>
+                <li><a href="kontakt.html" class="active">Kontakt</a></li> <!-- Aktualna strona -->
+            </ul>
         </nav>
     </header>
 
+    <!-- === Główna zawartość strony === -->
     <main class="wrap">
-        <h2>Kontakt</h2>
-        <p class="muted">Masz pytania lub chcesz współpracować? Napisz do mnie.</p>
+        <h2>Kontakt</h2> <!-- Nagłówek sekcji -->
+        <p class="muted">Masz pytania lub chcesz współpracować? Napisz do mnie.</p> <!-- Krótki opis sekcji -->
+
+        <!-- Formularz kontaktowy w karcie -->
         <div class="card">
             <form id="contact-form">
-
+                <!-- Wiersz z polami imię i email -->
                 <div class="form-row">
-                    <input id="name" placeholder="Twoje imię" required />
-                    <input id="email" type="email" placeholder="Email" required />
+                    <input id="name" placeholder="Twoje imię" required /> <!-- Pole imię, wymagane -->
+                    <input id="email" type="email" placeholder="Email" required /> <!-- Pole email, wymagane -->
                 </div>
 
+                <!-- Wiadomość: duży obszar tekstowy -->
                 <textarea id="message" placeholder="Twoja wiadomość" required></textarea>
 
+                <!-- Przycisk wysyłki wyrównany do prawej -->
                 <div style="display:flex;justify-content:flex-end;margin-top:10px">
                     <button class="button" type="submit">Wyślij</button>
                 </div>
 
+                <!-- Miejsce na wyświetlanie statusu wysyłki -->
                 <div id="form-status" class="muted"></div>
             </form>
         </div>
     </main>
 
+    <!-- === Stopka strony === -->
     <footer class="site-footer">© Moda & Styl</footer>
+
+    <!-- Podpięcie JS do obsługi formularza, hamburger menu itp. -->
     <script src="js/script.js"></script>
 </body>
 

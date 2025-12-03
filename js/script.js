@@ -1,17 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // === NEWSLETTER (mock) ===
-    const subscribeBtn = document.getElementById('subscribe-btn');
-    if (subscribeBtn) {
-        subscribeBtn.addEventListener('click', () => {
-            const email = document.getElementById('newsletter-email')?.value || '';
-            if (!email.includes('@')) { alert('Podaj poprawny email.'); return; }
-            alert('Dziękujemy! (mock)');
-            document.getElementById('newsletter-email').value = '';
-        });
-    }
-
     // === DANE DO SZAFY: OPIS + ZDJĘCIE ===
+    // Obiekt przechowujący informacje o każdym elemencie szafy:
+    // - text: opis elementu
+    // - img: ścieżka do zdjęcia elementu
     const wardrobeData = {
         "Beżowy płaszcz": {
             text: "Klasyczny beżowy płaszcz pasuje do każdej stylizacji — idealny do jeansów i eleganckich zestawów.",
@@ -39,8 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-
-    // === OBSŁUGA KLIKANIA W ELEMENTY SZAFY ===
+    // === DANE DO SZAFY: OPIS + ZDJĘCIE ===
+    // Obiekt przechowujący informacje o każdym elemencie szafy:
+    // - text: opis elementu
+    // - img: ścieżka do zdjęcia elementu
     document.querySelectorAll('.wardrobe-item').forEach(it => {
         it.addEventListener('click', () => {
             const item = it.dataset.item;
@@ -48,52 +42,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (!note || !wardrobeData[item]) return;
 
-            // generowanie HTML
             note.innerHTML = `
-            <h3>${item}</h3>
-            <p>${wardrobeData[item].text}</p>
-            <img src="${wardrobeData[item].img}" alt="${item}" style="
+                <h3>${item}</h3>
+                <p>${wardrobeData[item].text}</p>
+                <img src="${wardrobeData[item].img}" alt="${item}" style="
+                    width: 240px;
+                    margin-top: 12px;
+                    border-radius: 12px;
+                    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+                ">
+            `;
+        });
+    });
+
+    // === USTAWIENIE DOMYŚLNEGO ELEMENTU PO ZAŁADOWANIU STRONY ===
+    // Funkcja wywoływana po pełnym załadowaniu okna
+    window.onload = () => {
+
+        // Nazwa elementu, który ma być wyświetlony domyślnie
+        const defaultItem = "Beżowy płaszcz";
+
+        // Pobiera element do wyświetlania szczegółów
+        const note = document.getElementById("wardrobe-note");
+
+        // Jeśli element nie istnieje, zakończ funkcję
+        if (!note) return;
+
+        // Wstawia HTML dla domyślnego elementu
+        note.innerHTML = `
+            <h3>${defaultItem}</h3>
+            <p>${wardrobeData[defaultItem].text}</p>
+            <img src="${wardrobeData[defaultItem].img}" alt="${defaultItem}" style="
                 width: 240px;
                 margin-top: 12px;
                 border-radius: 12px;
                 box-shadow: 0 6px 14px rgba(0,0,0,0.1);
             ">
         `;
-        });
-    });
-
-
-    // === USTAWIENIE DOMYŚLNEGO ELEMENTU PO ZAŁADOWANIU STRONY ===
-    window.onload = () => {
-        const defaultItem = "Beżowy płaszcz";
-        const note = document.getElementById("wardrobe-note");
-
-        if (!note) return;
-
-        note.innerHTML = `
-        <h3>${defaultItem}</h3>
-        <p>${wardrobeData[defaultItem].text}</p>
-        <img src="${wardrobeData[defaultItem].img}" alt="${defaultItem}" style="
-            width: 240px;
-            margin-top: 12px;
-            border-radius: 12px;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.1);
-        ">
-    `;
     };
 
-    // === FORMULARZ KONTAKTOWY (mock) ===
-    const form = document.getElementById('contact-form');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.getElementById('name')?.value.trim();
-            const email = document.getElementById('email')?.value.trim();
-            const message = document.getElementById('message')?.value.trim();
-            const status = document.getElementById('form-status');
-            if (!name || !email || !message) { if (status) status.textContent = 'Uzupełnij wszystkie pola.'; return; }
-            if (status) status.textContent = 'Wysyłanie...';
-            setTimeout(() => { if (status) status.textContent = 'Wiadomość wysłana!'; form.reset(); }, 800);
+    // === RESPONSYWNE MENU HAMBURGER ===
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active'); // pokaz/ukryj menu
+            hamburger.classList.toggle('active'); // animacja hamburgera
         });
     }
 

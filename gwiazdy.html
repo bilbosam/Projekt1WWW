@@ -3,49 +3,74 @@
 
 <head>
     <meta charset="utf-8" />
+    <!-- Responsywne skalowanie na urządzeniach mobilnych -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Tytuł strony wyświetlany na karcie przeglądarki -->
     <title>Co noszą gwiazdy — Moda & Styl</title>
+    <!-- Podpięcie zewnętrznego pliku CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- === Nagłówek strony === -->
     <header class="site-header">
+        <!-- Logo i nazwa marki -->
         <div class="brand">
             <div class="logo">M</div>
             <div class="brand-text">
                 <h1>Moda & Styl</h1>
+                <!-- Opis aktualnej podstrony -->
                 <div class="muted">Co noszą gwiazdy</div>
             </div>
         </div>
-        <nav class="main-nav">
-            <a href="index.html" class="nav-link">Strona główna</a>
-            <a href="trendy.html" class="nav-link">Najnowsze trendy</a>
-            <a href="gwiazdy.html" class="nav-link active">Co noszą gwiazdy</a>
-            <a href="szafa.html" class="nav-link">Moja szafa</a>
-            <a href="kontakt.html" class="nav-link">Kontakt</a>
+
+        <!-- === RESPONSYWNE MENU HAMBURGER === -->
+        <nav class="navbar">
+            <!-- Hamburger menu (ukryty na desktop, widoczny na mobile) -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Lista linków nawigacyjnych -->
+            <ul class="nav-menu">
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="trendy.html">Najnowsze trendy</a></li>
+                <!-- Link do aktualnej podstrony oznaczony klasą active -->
+                <li><a href="gwiazdy.html" class="active">Co noszą gwiazdy</a></li>
+                <li><a href="szafa.html">Moja szafa</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
         </nav>
     </header>
 
+    <!-- === Główna zawartość strony === -->
     <main class="wrap">
+        <!-- Nagłówek sekcji -->
         <h2>Co noszą gwiazdy</h2>
+        <!-- Krótki opis sekcji -->
         <p class="muted">Analiza stylu z czerwonych dywanów i street style.</p>
 
+        <!-- === Lista postów w układzie pionowym === -->
         <div class="posts-vertical">
 
-
-            <!-- Kafelek 3 -->
+            <!-- Kafelek 3: pojedynczy artykuł -->
             <article class="post-vertical">
+                <!-- Obrazek tła kafelka -->
                 <div class="img" style="background-image:url('img/pic5.jpg'); height: 550px;"></div>
+                <!-- Metadane i opis -->
                 <div class="meta">
                     <h3>Czarna Elegancja - Met Gala 2025</h3>
-                    <p class="muted" style="font-size:18px;">Kim Kardashian olśniła na Met Gala 2025 w zmysłowej,
-                        czarnej stylizacji od Chrome Hearts — skórzanej, krojonej na miarę sukni o „alligator‑print”, z
-                        asymetrycznym, odsłaniającym ramię dekoltem i długim trenem. Do tego dobrała kapelusz‑fedora,
-                        który nadał całości lekko buntowniczego charakteru, a lodowe diamenty i perły podkreśliły
-                        kontrast między surowością skóry a luksusem biżuterii. Ten look to hołd dla stylu „Black
-                        dandyism” — łączy drapieżność rockowej elegancji z kobiecą sylwetką i hollywoodzkim glamour. W
-                        efekcie powstała kreacja, która balansuje między awangardą a ponadczasowym szykiem, doskonale
-                        wpisując się w ducha nocnych czerwonych dywanów.</p>
+                    <p class="muted" style="font-size:18px;">
+                        Kim Kardashian olśniła na Met Gala 2025 w zmysłowej, czarnej stylizacji od Chrome Hearts —
+                        skórzanej, krojonej na miarę sukni o „alligator‑print”, z asymetrycznym, odsłaniającym ramię
+                        dekoltem i długim trenem. Do tego dobrała kapelusz‑fedora, który nadał całości lekko
+                        buntowniczego charakteru, a lodowe diamenty i perły podkreśliły kontrast między surowością skóry
+                        a luksusem biżuterii. Ten look to hołd dla stylu „Black dandyism” — łączy drapieżność rockowej
+                        elegancji z kobiecą sylwetką i hollywoodzkim glamour. W efekcie powstała kreacja, która
+                        balansuje między awangardą a ponadczasowym szykiem, doskonale wpisując się w ducha nocnych
+                        czerwonych dywanów.
+                    </p>
                 </div>
             </article>
 
@@ -54,13 +79,13 @@
                 <div class="img" style="background-image:url('img/pic4.png'); height:550px;"></div>
                 <div class="meta">
                     <h3>Neonowa elegancja</h3>
-                    <p class="muted" style="font-size:18px;">Odważne, kolorowe garnitury damskie to hit sezonu dla
-                        pewnych siebie kobiet. Ich
-                        intensywne barwy i nowoczesne, dopasowane kroje sprawiają, że stają się centralnym punktem
-                        każdej stylizacji. Idealne na wieczorne wyjścia, eventy czy street style – łącz je z
-                        minimalistycznymi dodatkami, aby podkreślić moc koloru lub zestawiaj z kontrastującymi akcentami
-                        dla efektu wow. Neonowe garnitury to wyraz odwagi, stylu i kreatywności w modzie miejskiej i
-                        eleganckiej.</p>
+                    <p class="muted" style="font-size:18px;">
+                        Odważne, kolorowe garnitury damskie to hit sezonu dla pewnych siebie kobiet. Ich intensywne
+                        barwy i nowoczesne, dopasowane kroje sprawiają, że stają się centralnym punktem każdej
+                        stylizacji. Idealne na wieczorne wyjścia, eventy czy street style – łącz je z minimalistycznymi
+                        dodatkami, aby podkreślić moc koloru lub zestawiaj z kontrastującymi akcentami dla efektu wow.
+                        Neonowe garnitury to wyraz odwagi, stylu i kreatywności w modzie miejskiej i eleganckiej.
+                    </p>
                 </div>
             </article>
 
@@ -69,12 +94,13 @@
                 <div class="img" style="background-image:url('img/pic2.jpg'); height: 550px;"></div>
                 <div class="meta">
                     <h3>Filmowa czerwień</h3>
-                    <p class="muted" style="font-size:18px;">Czerwień to kolor, który przyciąga spojrzenia i emanuje
-                        pewnością siebie. Inspiracje z kultowych filmów, takich jak „Cruella” czy styl Marylin Monroe,
-                        pokazują, jak eleganckie czerwone suknie potrafią podkreślić kobiecą sylwetkę i dodać dramatyzmu
-                        każdej stylizacji. Idealne na wielkie wyjścia, sesje zdjęciowe czy wieczorne eventy – łącz
-                        klasyczne kroje z odważnymi dodatkami lub stawiaj na minimalistyczne akcenty, by czerwony kolor
-                        naprawdę błyszczał. Ten kolor to wyraz odwagi, glamour i niezapomnianego stylu filmowych ikon.
+                    <p class="muted" style="font-size:18px;">
+                        Czerwień to kolor, który przyciąga spojrzenia i emanuje pewnością siebie. Inspiracje z kultowych
+                        filmów, takich jak „Cruella” czy styl Marylin Monroe, pokazują, jak eleganckie czerwone suknie
+                        potrafią podkreślić kobiecą sylwetkę i dodać dramatyzmu każdej stylizacji. Idealne na wielkie
+                        wyjścia, sesje zdjęciowe czy wieczorne eventy – łącz klasyczne kroje z odważnymi dodatkami lub
+                        stawiaj na minimalistyczne akcenty, by czerwony kolor naprawdę błyszczał. Ten kolor to wyraz
+                        odwagi, glamour i niezapomnianego stylu filmowych ikon.
                     </p>
                 </div>
             </article>
@@ -82,7 +108,10 @@
         </div>
     </main>
 
+    <!-- === Stopka strony === -->
     <footer class="site-footer">© Moda & Styl</footer>
+
+    <!-- Podpięcie pliku JS do obsługi interakcji (np. hamburger menu) -->
     <script src="js/script.js"></script>
 </body>
 

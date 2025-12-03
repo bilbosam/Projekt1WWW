@@ -3,34 +3,55 @@
 
 <head>
     <meta charset="utf-8" />
+    <!-- Responsywność na urządzeniach mobilnych -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Tytuł strony wyświetlany w karcie przeglądarki -->
     <title>Moja szafa — Moda & Styl</title>
+    <!-- Podpięcie pliku CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- === Nagłówek strony === -->
     <header class="site-header">
+        <!-- Logo i nazwa strony -->
         <div class="brand">
-            <div class="logo">M</div>
+            <div class="logo">M</div> <!-- Ikona/logo -->
             <div class="brand-text">
-                <h1>Moda & Styl</h1>
-                <div class="muted">Moja szafa</div>
+                <h1>Moda & Styl</h1> <!-- Główny tytuł strony -->
+                <div class="muted">Moja szafa</div> <!-- Podtytuł sekcji -->
             </div>
         </div>
-        <nav class="main-nav">
-            <a href="index.html" class="nav-link">Strona główna</a>
-            <a href="trendy.html" class="nav-link">Najnowsze trendy</a>
-            <a href="gwiazdy.html" class="nav-link">Co noszą gwiazdy</a>
-            <a href="szafa.html" class="nav-link active">Moja szafa</a>
-            <a href="kontakt.html" class="nav-link">Kontakt</a>
+
+        <!-- === RESPONSYWNE MENU HAMBURGER === -->
+        <nav class="navbar">
+            <!-- Hamburger menu (widoczne na mobilnych) -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Lista linków nawigacyjnych -->
+            <ul class="nav-menu">
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="trendy.html">Najnowsze trendy</a></li>
+                <li><a href="gwiazdy.html">Co noszą gwiazdy</a></li>
+                <li><a href="szafa.html" class="active">Moja szafa</a></li> <!-- Aktualna strona -->
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
         </nav>
     </header>
 
+    <!-- === Główna zawartość strony === -->
     <main class="wrap">
-        <h2>Moja szafa</h2>
-        <p class="muted">Organizacja i capsule wardrobe — podstawy.</p>
+        <h2>Moja szafa</h2> <!-- Nagłówek sekcji -->
+        <p class="muted">Organizacja i capsule wardrobe — podstawy.</p> <!-- Krótki opis sekcji -->
+
+        <!-- Karta z elementami szafy -->
         <div class="card">
+            <!-- Siatka ubrań -->
             <div class="wardrobe-grid">
+                <!-- Pojedyncze elementy szafy z atrybutem data-item -->
                 <div class="wardrobe-item" data-item="Beżowy płaszcz">Beżowy płaszcz</div>
                 <div class="wardrobe-item" data-item="Biała koszula">Biała koszula</div>
                 <div class="wardrobe-item" data-item="Skórzana torebka">Skórzana torebka</div>
@@ -38,11 +59,15 @@
                 <div class="wardrobe-item" data-item="Sweter oversize">Sweter oversize</div>
                 <div class="wardrobe-item" data-item="Botki skórzane">Botki skórzane</div>
             </div>
+            <!-- Miejsce na opis wybranego elementu po kliknięciu -->
             <div id="wardrobe-note" class="muted">Brak wybranego elementu.</div>
         </div>
     </main>
 
+    <!-- === Stopka strony === -->
     <footer class="site-footer">© Moda & Styl</footer>
+
+    <!-- Podpięcie JS do obsługi kliknięć w elementy szafy -->
     <script src="js/script.js"></script>
 </body>
 

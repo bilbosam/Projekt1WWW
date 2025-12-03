@@ -3,85 +3,111 @@
 
 <head>
     <meta charset="utf-8" />
+    <!-- Ustawienie responsywności dla urządzeń mobilnych -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Tytuł strony wyświetlany w karcie przeglądarki -->
     <title>Moda & Styl — Strona główna</title>
+    <!-- Podpięcie zewnętrznego pliku CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- === Nagłówek strony === -->
     <header class="site-header">
+        <!-- Logo i nazwa bloga -->
         <div class="brand">
-            <div class="logo">M</div>
+            <div class="logo">M</div> <!-- Ikona/logo strony -->
             <div class="brand-text">
-                <h1>Moda & Styl</h1>
-                <div class="muted">Blog modowy</div>
+                <h1>Moda & Styl</h1> <!-- Główny tytuł -->
+                <div class="muted">Blog modowy</div> <!-- Krótki opis lub motto -->
             </div>
         </div>
-        <nav class="main-nav">
-            <a href="index.html" class="nav-link active">Strona główna</a>
-            <a href="trendy.html" class="nav-link">Najnowsze trendy</a>
-            <a href="gwiazdy.html" class="nav-link">Co noszą gwiazdy</a>
-            <a href="szafa.html" class="nav-link">Moja szafa</a>
-            <a href="kontakt.html" class="nav-link">Kontakt</a>
+
+        <!-- === RESPONSYWNE MENU HAMBURGER === -->
+        <nav class="navbar">
+            <!-- Hamburger menu do mobilnej nawigacji -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Lista linków nawigacyjnych -->
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Strona główna</a></li>
+                <!-- Link do aktualnej strony z klasą active -->
+                <li><a href="trendy.html">Najnowsze trendy</a></li>
+                <li><a href="gwiazdy.html">Co noszą gwiazdy</a></li>
+                <li><a href="szafa.html">Moja szafa</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
         </nav>
     </header>
 
+    <!-- === Główna zawartość strony === -->
     <main class="wrap">
         <section class="hero">
+            <!-- Lewa kolumna z powitalnym tekstem i wpisami -->
             <div class="hero-left">
-                <h2>Witaj na blogu Moda & Styl</h2>
+                <h2>Witaj na blogu Moda & Styl</h2> <!-- Nagłówek sekcji powitalnej -->
                 <p class="lead">Inspiracje, porady i analiza trendów — wszystko w eleganckich odcieniach beżu i brązu.
-                </p>
+                </p> <!-- Krótki opis -->
 
-
+                <!-- Lista wpisów w formie kafelków -->
                 <div class="posts">
-                    <!-- Trendy -->
+                    <!-- Trendy: pojedynczy kafelek -->
                     <a href="trendy.html" class="post-link">
                         <article class="post">
-                            <div class="img" style="background-image: url('img/pics1.jpg');">
-                            </div>
+                            <!-- Obraz tła kafelka -->
+                            <div class="img" style="background-image: url('img/pics1.jpg');"></div>
+                            <!-- Metadane i opis wpisu -->
                             <div class="meta">
-                                <span class="tag">Trendy</span>
-                                <h3>Beże tej jesieni — jak je nosić?</h3>
+                                <span class="tag">Trendy</span> <!-- Kategoria wpisu -->
+                                <h3>Beże tej jesieni — jak je nosić?</h3> <!-- Tytuł wpisu -->
                                 <p class="muted">
                                     Eleganckie odcienie beżu w ubraniach i dodatkach – idealne do monochromatycznych
-                                    stylizacji lub subtelnych akcentów kolorystycznych.
-                                </p>
+                                    stylizacji.
+                                </p> <!-- Krótki opis wpisu -->
                             </div>
                         </article>
                     </a>
 
-                    <!-- Gwiazdy / street style -->
+                    <!-- Gwiazdy / street style: kolejny kafelek -->
                     <a href="gwiazdy.html" class="post-link">
                         <article class="post">
-                            <div class="img" style="background-image: url('img/pics.jpg');">
-                            </div>
-                            <div class="meta"><span class="tag">Gwiazdy</span>
-                                <h3>Kontrowersyjna kreacja słynnej celebrytki</h3>
-                                <p class="muted">Czym w trakcie tegorocznej edycji Met Gali zwróciła na siebie uwagę
-                                    najsłynniejsza z sióstr Kardashian?</p>
+                            <div class="img" style="background-image: url('img/pics.jpg');"></div>
+                            <div class="meta">
+                                <span class="tag">Gwiazdy</span> <!-- Kategoria wpisu -->
+                                <h3>Kontrowersyjna kreacja słynnej celebrytki</h3> <!-- Tytuł wpisu -->
+                                <p class="muted">
+                                    Czym w trakcie tegorocznej edycji Met Gali zwróciła na siebie uwagę najsłynniejsza z
+                                    sióstr Kardashian?
+                                </p> <!-- Krótki opis wpisu -->
                             </div>
                         </article>
                     </a>
                 </div>
             </div>
 
+            <!-- Prawa kolumna: panel boczny z newsletterem -->
             <aside class="hero-aside">
                 <div class="card">
-                    <h4>Newsletter</h4>
-                    <p class="muted">Zapisz się, aby otrzymywać nowe wpisy.</p>
+                    <h4>Newsletter</h4> <!-- Nagłówek sekcji newsletter -->
+                    <p class="muted">Zapisz się, aby otrzymywać nowe wpisy.</p> <!-- Krótki opis -->
                     <div class="newsletter">
+                        <!-- Pole do wpisania emaila -->
                         <input id="newsletter-email" placeholder="Twój email" />
+                        <!-- Przycisk zapisania do newslettera -->
                         <button class="button" id="subscribe-btn">Zapisz się</button>
                     </div>
-
                 </div>
             </aside>
         </section>
     </main>
 
+    <!-- === Stopka strony === -->
     <footer class="site-footer">© Moda & Styl — Wszystkie prawa zastrzeżone</footer>
 
+    <!-- Podpięcie skryptu JS do obsługi interakcji strony (np. hamburger menu, newsletter) -->
     <script src="js/script.js"></script>
 </body>
 
